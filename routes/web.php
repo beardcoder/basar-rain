@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ContactUsFormController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'home'])->name('frontend.home');
+Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->middleware(ProtectAgainstSpam::class)->name('contact.store');
 Route::get('{slug}', [PageController::class, 'show'])->name('frontend.page');

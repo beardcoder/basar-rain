@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use A17\Twill\Facades\TwillAppSettings;
 use App\Repositories\PageRepository;
-use App\Models\Page;
 use Illuminate\View\View;
 
 class PageController extends Controller
