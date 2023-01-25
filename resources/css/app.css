@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+@layer components {
+  .text-design {
+    @apply relative mr-auto flex w-auto before:absolute before:-left-3 before:bottom-0 before:-z-10 before:h-2 before:w-1/2 before:bg-secondary-300;
+  }
+}
