@@ -9,7 +9,7 @@
     {
       "files": ["*.blade.php"],
       "options": {
-        "tabWidth": 4,
+        "tabWidth": 2,
         "parser": "blade"
       }
     }
