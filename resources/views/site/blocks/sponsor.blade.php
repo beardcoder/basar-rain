@@ -4,7 +4,7 @@
 <div class="w-full p-4 sm:w-1/2 lg:w-1/4">
     <div class="flex h-full flex-col items-center text-center">
         <a href="{!! $block->input('url') !!}">
-            <img src="{!! $block->image('image', 'sponsor') !!}" alt="{{ $block->input('name') }}">
+            <img src="{!! $block->image('sponsor_image', 'default') !!}" alt="{{ $block->input('name') }}">
         </a>
         <div class="w-full">
             <h3 class="text-lg font-bold">

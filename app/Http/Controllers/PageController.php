@@ -8,28 +8,30 @@ use Illuminate\View\View;
 
 class PageController extends Controller
 {
-    public function show(string $slug, PageRepository $pageRepository): View
-    {
-        $page = $pageRepository->forSlug($slug);
+  public function show(string $slug, PageRepository $pageRepository): View
+  {
+    $page = $pageRepository->forSlug($slug);
 
-        if (!$page) {
-            abort(404);
-        }
-
-        return view('site.page', ['item' => $page]);
+    if (!$page) {
+      abort(404);
     }
 
-    public function home(): View
-    {
-        if (TwillAppSettings::get('homepage.homepage.page')->isNotEmpty()) {
-            /** @var \App\Models\Page $frontPage */
-            $page = TwillAppSettings::get('homepage.homepage.page')->first();
+    $seo = $page->seo;
 
-            if ($page->published) {
-                return view('site.page', ['item' => $page]);
-            }
-        }
+    return view("site.page", ["item" => $page, "seo" => $seo]);
+  }
 
-        abort(404);
+  public function home(): View
+  {
+    if (TwillAppSettings::get("homepage.homepage.page")->isNotEmpty()) {
+      /** @var \App\Models\Page $frontPage */
+      $page = TwillAppSettings::get("homepage.homepage.page")->first();
+
+      if ($page->published) {
+        return view("site.page", ["item" => $page]);
+      }
     }
+
+    abort(404);
+  }
 }

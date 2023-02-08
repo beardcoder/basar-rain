@@ -43,6 +43,7 @@ module.exports = {
     },
   },
   plugins: [
+    require("@tailwindcss/typography"),
     plugin(function ({ addUtilities }) {
       addUtilities({
         ".text-shadow-white": {

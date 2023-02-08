@@ -1,0 +1,3 @@
+<section>
+    <x-events />
+</section>

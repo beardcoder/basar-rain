@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\ContactUsFormController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +17,14 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 |
 */
 
-Route::get('/', [PageController::class, 'home'])->name('frontend.home');
-Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->middleware(ProtectAgainstSpam::class)->name('contact.store');
-Route::get('{slug}', [PageController::class, 'show'])->name('frontend.page');
+Route::get("/", [PageController::class, "home"])->name("frontend.home");
+
+Route::post("/contact", [ContactUsFormController::class, "ContactUsForm"])
+  ->middleware(ProtectAgainstSpam::class)
+  ->name("contact.store");
+
+Route::get("/veranstaltungen/{slug}", [EventController::class, "show"])->name(
+  "event.page"
+);
+
+Route::get("{slug}", [PageController::class, "show"])->name("frontend.page");

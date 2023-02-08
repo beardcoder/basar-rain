@@ -10,31 +10,37 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
+  /**
+   * Register any application services.
+   *
+   * @return void
+   */
+  public function register()
+  {
+    //
+  }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        TwillNavigation::addLink(
-            NavigationLink::make()->forModule('pages')->title('Seiten')
-        );
-        TwillNavigation::addLink(
-            NavigationLink::make()->forModule('events')->title('Veranstaltungen')
-        );
-        TwillAppSettings::registerSettingsGroup(
-            SettingsGroup::make()->name('homepage')->label('Homepage')
-        );
-    }
+  /**
+   * Bootstrap any application services.
+   *
+   * @return void
+   */
+  public function boot()
+  {
+    TwillNavigation::addLink(
+      NavigationLink::make()
+        ->forModule("pages")
+        ->title("Seiten")
+    );
+    TwillNavigation::addLink(
+      NavigationLink::make()
+        ->forModule("events")
+        ->title("Veranstaltungen")
+    );
+    TwillAppSettings::registerSettingsGroup(
+      SettingsGroup::make()
+        ->name("homepage")
+        ->label("Homepage")
+    );
+  }
 }

@@ -3,4 +3,4 @@
 
 <x-twill::input name="name" label="Name" />
 <x-twill::input name="url" label="URL" type="url" />
-<x-twill::medias name="image" label="Bild" />
+<x-twill::medias name="sponsor_image" label="Bild" />

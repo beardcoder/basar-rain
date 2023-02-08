@@ -12,11 +12,9 @@ return new class extends Migration {
    */
   public function up()
   {
-    Schema::create("contacts", function (Blueprint $table) {
-      $table->id();
-      $table->string("email");
-      $table->text("message");
-      $table->timestamps();
+    Schema::table("events", function (Blueprint $table) {
+      $table->string("start_date")->nullable();
+      $table->string("end_date")->nullable();
     });
   }
 
@@ -27,6 +25,9 @@ return new class extends Migration {
    */
   public function down()
   {
-    Schema::dropIfExists("contacts");
+    Schema::table("events", function (Blueprint $table) {
+      $table->dropColumn("start_date");
+      $table->dropColumn("end_date");
+    });
   }
 };

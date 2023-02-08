@@ -9,11 +9,11 @@ use Illuminate\View\Component;
 
 class Footer extends Component
 {
-    public function render(): View
-    {
-        /** @var Page[] $links */
-        $links = TwillAppSettings::get('homepage.footer.pages');
+  public function render(): View
+  {
+    /** @var Page[] $links */
+    $links = TwillAppSettings::get("homepage.footer.pages");
 
-        return view('components.footer', ['links' => $links]);
-    }
+    return view("components.footer", ["links" => $links]);
+  }
 }

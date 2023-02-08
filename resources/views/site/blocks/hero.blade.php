@@ -3,7 +3,7 @@
 @endphp
 <section class="relative flex h-[600px]">
     <div class="absolute inset-0 -z-10 after:absolute after:inset-0 after:bg-secondary-50/80 md:after:hidden">
-        <img src="{!! $block->image('image', 'hero') !!}" alt="{{ $block->input('title') }}"
+        <img src="{!! $block->image('hero_image', 'default') !!}" alt="{{ $block->input('title') }}"
             class="h-full w-full object-cover object-right" />
     </div>
     <div class="container mx-auto flex h-full flex-col items-center px-5 md:flex-row">

@@ -8,11 +8,13 @@ use Illuminate\View\Component;
 
 class Menu extends Component
 {
-    public function render(): View
-    {
-        /** @var Page[] $links */
-        $links = Page::published()->get()->toTree();
+  public function render(): View
+  {
+    /** @var Page[] $links */
+    $links = Page::published()
+      ->get()
+      ->toTree();
 
-        return view('components.menu', ['links' => $links]);
-    }
+    return view("components.menu", ["links" => $links]);
+  }
 }
