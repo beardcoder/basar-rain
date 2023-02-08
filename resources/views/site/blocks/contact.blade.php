@@ -53,7 +53,7 @@
                     <div class="mt-8 w-full border-t border-gray-200 p-2 pt-8">
                         <a class="text-primary-500">{!! $block->input('email') !!}</a>
                         <p class="my-5 leading-normal">
-                            {!! $block->input('adress') !!}
+                            {!! nl2br($block->input('adress')) !!}
                         </p>
                     </div>
                 </div>

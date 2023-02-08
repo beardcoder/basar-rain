@@ -13,7 +13,7 @@
                 {!! $block->input('title') !!}
             </h1>
             <p class="mb-10 max-w-lg leading-relaxed">
-                {!! $block->input('text') !!}
+                {!! nl2br($block->input('text')) !!}
             </p>
             <div class="flex justify-center">
                 <a href="{!! $block->input('link') !!}" target="_self"
