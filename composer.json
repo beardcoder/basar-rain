@@ -45,7 +45,6 @@
   },
   "scripts": {
     "post-autoload-dump": [
-      "@php artisan twill:update --ansi",
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
       "@php artisan package:discover --ansi"
     ],
