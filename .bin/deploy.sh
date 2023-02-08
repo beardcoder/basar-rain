@@ -23,6 +23,9 @@ php artisan clear-compiled
 php artisan optimize
 
 # Compile npm assets
+npm ci
+
+# Compile npm assets
 npm run build
 
 # Run database migrations
