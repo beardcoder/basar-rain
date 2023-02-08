@@ -14,6 +14,7 @@
     "area17/twill-image": "^1.0",
     "artesaos/seotools": "^1.0",
     "guzzlehttp/guzzle": "^7.2",
+    "htmlmin/htmlmin": "^9.0",
     "kalnoy/nestedset": "^6.0",
     "laravel/framework": "^9.19",
     "laravel/sanctum": "^3.0",
