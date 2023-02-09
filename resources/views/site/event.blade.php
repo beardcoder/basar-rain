@@ -1,4 +1,4 @@
-@extends('site.layouts.event')
+@extends('site.layouts.page')
 
 @section('content')
   <header>
@@ -17,4 +17,4 @@
     {!! $item->title !!}
   </main>
   <x-footer />
-@stop
+@endsection

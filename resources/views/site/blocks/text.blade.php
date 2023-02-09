@@ -1,5 +1,8 @@
-<section>
-  <div class="container mx-auto px-5 py-24">
+<section @class([
+    'py-24' => $block->input('space') === 'large',
+    'py-12' => $block->input('space') === 'small',
+])>
+  <div class="container mx-auto px-5">
     <div class="grid md:grid-cols-2">
       <div>
         <h2 class="font-serif text-3xl font-bold mb-6">

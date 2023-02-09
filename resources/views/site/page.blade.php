@@ -1,4 +1,5 @@
 @extends('site.layouts.page')
+
 @section('content')
   <header>
     <div class="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
@@ -16,4 +17,4 @@
     {!! $item->renderBlocks() !!}
   </main>
   <x-footer />
-@stop
+@endsection
