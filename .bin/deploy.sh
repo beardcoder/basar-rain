@@ -26,7 +26,7 @@ php artisan view:clear
 php artisan optimize
 
 # Compile npm assets
-npm ci
+npm install
 
 # Compile npm assets
 npm run build
