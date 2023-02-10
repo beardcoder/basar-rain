@@ -10,7 +10,8 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.png">
 
-  {!! seo()->for($item) !!}
+  {!! SEO::generate(true) !!}
+
   @vite(['resources/css/app.css'])
 </head>
 

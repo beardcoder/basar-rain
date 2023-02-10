@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\EventRepository;
+use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\View\View;
 
 class EventController extends Controller
@@ -14,6 +15,7 @@ class EventController extends Controller
     if (!$page) {
       abort(404);
     }
+    SEOTools::setTitle($page->seo_title ?? $page->title);
 
     return view("site.event", ["item" => $page]);
   }
